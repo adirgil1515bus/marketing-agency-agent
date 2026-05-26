@@ -21,7 +21,7 @@ Read `CHANGELOG.md` to understand everything that has been done so far.
 | Person | GitHub username | Branch to work on |
 |---|---|---|
 | Adir (owner) | `adirgil1515bus` | `adir` |
-| Brother (collaborator) | TBD | `brother` |
+| Asaf (collaborator) | `asaf3698` | `brother` |
 
 Both work independently but share the same GitHub repository.
 The `main` branch [the primary stable version of the code] is the source of truth.
@@ -225,7 +225,7 @@ When the brother sets up his machine, he must:
 ## Current Known Issues
 
 - **OpenAI API key:** The VOICE_TOOLS_OPENAI_KEY in `~/.hermes/.env` on Adir's machine was exposed in chat and must be regenerated at platform.openai.com.
-- **Brother GitHub invite:** Pending — Adir needs to share brother's GitHub username to add him as collaborator.
+- **Asaf GitHub invite:** Sent to `asaf3698` — he needs to accept the invite at github.com/notifications before he can push to the repo.
 
 ---
 
