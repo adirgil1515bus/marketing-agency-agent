@@ -21,7 +21,7 @@ Read `CHANGELOG.md` to understand everything that has been done so far.
 | Person | GitHub username | Branch to work on |
 |---|---|---|
 | Adir (owner) | `adirgil1515bus` | `adir` |
-| Asaf (collaborator) | `asaf3698` | `brother` |
+| Asaf (collaborator) | `asaf3698` | `asaf` |
 
 Both work independently but share the same GitHub repository.
 The `main` branch [the primary stable version of the code] is the source of truth.
@@ -35,12 +35,12 @@ Neither person works directly on `main` — all work happens on personal branche
 
 - **`main`** — The stable, approved version of the project. Never commit directly here. Only updated via Pull Requests [a request to merge your work into the main branch, reviewed and approved before it goes in].
 - **`adir`** — Adir's personal working branch. Only Adir and his Claude work here.
-- **`brother`** — Brother's personal working branch. Only the brother and his Claude work here.
+- **`asaf`** — Asaf's personal working branch. Only Asaf and his Claude work here.
 
 ### The golden rule
 **Never work on someone else's branch. Never push to `main` directly.**
 If you are Adir's Claude → only commit to `adir`.
-If you are the brother's Claude → only commit to `brother`.
+If you are Asaf's Claude → only commit to `asaf`.
 
 ---
 
@@ -55,14 +55,14 @@ git branch
 
 # 2. Switch to YOUR branch (replace with the correct name)
 git checkout adir         # if you are Adir's Claude
-git checkout brother      # if you are brother's Claude
+git checkout asaf         # if you are Asaf's Claude
 
 # 3. Sync your branch with the latest from main
 # (picks up any changes the other person merged since your last session)
 git pull origin main
 
 # 4. Push the sync to your remote branch
-git push origin adir      # or brother
+git push origin adir      # or asaf
 ```
 
 Then read `CHANGELOG.md` to catch up on what the other person did since your last session.
@@ -85,7 +85,7 @@ git add .
 git commit -m "Add competitor analysis skill for e-commerce clients"
 
 # Push to your branch on GitHub
-git push origin adir      # or brother
+git push origin adir      # or asaf
 ```
 
 ---
@@ -98,13 +98,13 @@ git push origin adir      # or brother
 ```bash
 git add .
 git commit -m "Session summary: [one-line description of what was done]"
-git push origin adir      # or brother
+git push origin adir      # or asaf
 ```
 
 3. **Open a Pull Request [PR] if the work is ready to go into main:**
    - Go to: https://github.com/adirgil1515bus/marketing-agency-agent
    - Click "Pull Requests" → "New Pull Request"
-   - Set: base = `main`, compare = your branch (`adir` or `brother`)
+   - Set: base = `main`, compare = your branch (`adir` or `asaf`)
    - Write a short description of what you built
    - Tag the other person to review it before merging
 
@@ -117,7 +117,7 @@ Add a new entry at the TOP of the file (below the intro section, above all previ
 ```
 ## Session N — YYYY-MM-DD
 **Who:** [Adir / Brother] + Claude (Claude Code, [model name])
-**Branch:** [adir / brother]
+**Branch:** [adir / asaf]
 **Focus:** [one-line summary of the session goal]
 
 ### What was done
@@ -131,7 +131,7 @@ Add a new entry at the TOP of the file (below the intro section, above all previ
 - [what should happen next — so the other person knows what's coming]
 ```
 
-Be specific. This log is how both Adir and his brother (and their Claudes) stay in sync without needing to call each other.
+Be specific. This log is how both Adir and Asaf (and their Claudes) stay in sync without needing to call each other.
 
 ---
 
@@ -147,9 +147,9 @@ Git will mark the conflict in the file like this:
 Session 5 — 2026-06-01 (Adir's entry)
 =======
 Session 5 — 2026-05-31 (Brother's entry)
->>>>>>> brother
+>>>>>>> asaf
 ```
-Fix it by keeping BOTH entries (Adir's above, brother's below), then remove the conflict markers. Commit the fix.
+Fix it by keeping BOTH entries (Adir's above, Asaf's below), then remove the conflict markers. Commit the fix.
 
 ---
 
@@ -164,7 +164,7 @@ Steps:
 ```bash
 # Make sure your branch is up to date first
 git pull origin main
-git push origin adir      # or brother
+git push origin adir      # or asaf
 
 # Then go to GitHub and open a Pull Request
 ```
@@ -172,7 +172,7 @@ git push origin adir      # or brother
 After a PR is merged into `main`, BOTH people must sync their branches:
 ```bash
 git pull origin main
-git push origin adir      # or brother — to keep your branch up to date
+git push origin adir      # or asaf — to keep your branch up to date
 ```
 
 ---
@@ -215,7 +215,7 @@ These live on each person's Mac — they are NOT shared via GitHub and must be s
 | `~/.hermes/SOUL.md` | Active persona — must match `soul/SOUL.md` from the repo |
 | `~/.hermes/config.yaml` | Model: `anthropic/claude-sonnet-4-6` |
 
-When the brother sets up his machine, he must:
+When Asaf sets up his machine, he must:
 1. Install Hermes (see README.md)
 2. Copy `soul/SOUL.md` → `~/.hermes/SOUL.md`
 3. Add his own API key to `~/.hermes/.env`
