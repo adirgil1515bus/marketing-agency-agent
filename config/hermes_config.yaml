@@ -1,0 +1,25 @@
+# APEX Digital — Hermes Agency Configuration
+# Copy relevant settings into ~/.hermes/config.yaml to activate
+
+model:
+  default: "anthropic/claude-sonnet-4-6"
+  provider: "anthropic"
+
+agent:
+  name: "APEX Digital AI Director"
+  soul_file: "soul/SOUL.md"
+  workspace: "/Users/adirgil/sandbox/Claude sandbox/marketing agency agent"
+
+context:
+  always_load:
+    - "data/mock_campaigns.json"
+    - "soul/SOUL.md"
+
+skills:
+  enabled:
+    - "google-ads-analysis"
+    - "keyword-research"
+    - "campaign-optimizer"
+    - "performance-reporter"
+    - "competitor-analysis"
+    - "budget-optimizer"
